@@ -12,8 +12,8 @@ export class AddBookmarkComponent implements OnInit {
 
     constructor(formBuilder: FormBuilder) {
         this.form = formBuilder.group({
-            // 'title': ['Test'],
-            // 'link': ['google.com']
+            'title': ['Test'],
+            'link': ['google.com']
         });
     }
 

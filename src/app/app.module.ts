@@ -4,9 +4,12 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {BookmarksComponent} from './components/bookmarks/bookmarks.component';
-import {AddBookmarkComponent} from './components/add-bookmark/add-bookmark.component';
-import {BookmarkListComponent} from './components/bookmark-list/bookmark-list.component';
+import {AddBookmarkComponent} from './components/bookmarks/add-bookmark/add-bookmark.component';
+import {BookmarkListComponent} from './components/bookmarks/bookmark-list/bookmark-list.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { TodoComponent } from './components/todo/todo.component';
+import { TodoAddComponent } from './components/todo/todo-add/todo-add.component';
+import { TodoListComponent } from './components/todo/todo-list/todo-list.component';
 
 
 @NgModule({
@@ -14,7 +17,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
         AppComponent,
         BookmarksComponent,
         AddBookmarkComponent,
-        BookmarkListComponent
+        BookmarkListComponent,
+        TodoComponent,
+        TodoAddComponent,
+        TodoListComponent
     ],
     imports: [
         BrowserModule,

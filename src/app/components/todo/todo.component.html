@@ -5,7 +5,7 @@
   </div>
 </div>
 
-<app-todo-add></app-todo-add>
+<app-todo-add (onAdd)="addToList($event)"></app-todo-add>
 
-<app-todo-list></app-todo-list>
+<app-todo-list [items]="toDoList"></app-todo-list>
 

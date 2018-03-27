@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 
 @Component({
@@ -8,20 +8,27 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 })
 export class AddBookmarkComponent implements OnInit {
 
+    @Output() onClick: EventEmitter<string> = new EventEmitter<string>();
+
     form: FormGroup;
 
-    constructor(formBuilder: FormBuilder) {
-        this.form = formBuilder.group({
-            'title': ['Test'],
-            'link': ['google.com']
-        });
+    // constructor(formBuilder: FormBuilder) {
+    constructor() {
+        // this.form = formBuilder.group({
+        //     'title': ['Test'],
+        //     'link': ['google.com']
+        // });
     }
 
     ngOnInit() {
     }
 
-    addBookmark(data) {
-        console.log(data);
+    addBookmark(form) {
+        this.save(form.title);
+    }
+
+    save(title) {
+        this.onClick.emit(title);
     }
 
 

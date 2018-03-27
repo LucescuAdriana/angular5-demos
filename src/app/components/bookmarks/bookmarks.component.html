@@ -5,7 +5,6 @@
     </div>
 </div>
 
-<app-add-bookmark></app-add-bookmark>
+<app-add-bookmark (onClick)="addBookmark($event)"></app-add-bookmark>
 
-<app-bookmark-list></app-bookmark-list>
-
+<app-bookmark-list [bookmarks]="bookmarksList"></app-bookmark-list>
